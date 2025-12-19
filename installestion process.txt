@@ -1,0 +1,64 @@
+Step 1 – Backend (server)
+1.Open a terminal (PowerShell or Command Prompt).
+
+2.Go to your server folder:
+
+cd "C:\Users\Rahul\Desktop\AI Assistant\AI Assistant\server"
+
+3.Create virtual environment:
+
+py -3.12 -m venv .venv
+
+4.Activate it:
+
+.venv\Scripts\activate
+
+5.Install all backend libraries:
+
+uv pip install -r requirements.txt
+
+6.Make sure API keys are in a .env file in the server folder (Pinecone, Groq).
+
+Start backend:
+
+uvicorn main:app --reload
+
+
+
+Step 2 – Frontend (client)
+
+Open a new terminal window.
+
+Go to your client folder:
+
+cd "C:\Users\Rahul\Desktop\AI Assistant\AI Assistant\client"
+
+Create virtual environment:
+
+py -3.12 -m venv .venv
+
+Activate it:
+
+.venv\Scripts\activate
+
+Install frontend libraries:
+
+
+
+uv pip install -r requirements.txt
+
+Check config.py:
+
+API_URL = "http://127.0.0.1:8000"
+
+Start Streamlit:
+
+streamlit run app.py
+
+Your app will open in browser at http://localhost:8501.
+
+That’s all you need:
+
+Step 1: run backend (server).
+
+Step 2: run frontend (client).
